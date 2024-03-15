@@ -9,7 +9,7 @@ import mindustry.gen.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 import mindustry.type.*;
-import arc.graphics.Color;
+import arc.graphics.*;
 
 public class ExampleJavaMod extends Mod{
 
