@@ -21,35 +21,35 @@ public class ExampleJavaMod extends Mod{
         Log.info("Loading some example content.");
         // loading content. We content too less to in many files      
         // item category:
-        cophalast = new Item("Cophalast", Color.valueOf("dee650"){{
+        cophalast = new Item("Cophalast", Color.valueOf("dee650")){{
             cost = 1f;
         }};
 
-        trinaxide = new Item("Trinaxide", Color.valueOf("dee650"){{
+        trinaxide = new Item("Trinaxide", Color.valueOf("dee650")){{
             cost = 1f;
         }};
 
-        monoglox = new Item("Monoglox", Color.valueOf("dee650"){{
+        monoglox = new Item("Monoglox", Color.valueOf("dee650")){{
             cost = 1f;
         }};
 
-        polamenis = new Item("Polanemis", Color.valueOf("dee650"){{
+        polamenis = new Item("Polanemis", Color.valueOf("dee650")){{
             cost = 1f;
             flammability = 1f;
             explosiveness = 0.2f;
         }};
 
-        xenathium = new Item("Xenathium", Color.valueOf("dee650"){{
+        xenathium = new Item("Xenathium", Color.valueOf("dee650")){{
             cost = 1f;
         }};
 
-        hilimeni = new Item("Hilimeni", Color.valueOf("dee650"){{
+        hilimeni = new Item("Hilimeni", Color.valueOf("dee650")){{
             cost = 1f;
             flammability = 0.2f;
             explosiveness = 1f;
         }};
 
-        hexademia = new Item("Hexademia", Color.valueOf("dee650"){{
+        hexademia = new Item("Hexademia", Color.valueOf("dee650")){{
             cost = 1f;
         }};
 
