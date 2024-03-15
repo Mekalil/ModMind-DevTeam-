@@ -55,29 +55,29 @@ public class ExampleJavaMod extends Mod{
 
         // Synthetic materials
 
-        kructrok = new Item("Kructrok", Color.valueOf("dee650"){{
+        kructrok = new Item("Kructrok", Color.valueOf("dee650")){{
             cost = 1f;
         }};
 
-        nasmehro = new Item("Nasmehro", Color.valueOf("dee650"){{
+        nasmehro = new Item("Nasmehro", Color.valueOf("dee650")){{
             cost = 1f;
         }};
 
-        flukemasd = new Item("Flukemasd fiber", Color.valueOf("dee650"){{
+        flukemasd = new Item("Flukemasd fiber", Color.valueOf("dee650")){{
             cost = 1f;
         }};
 
         // End of material, start for liquid.
         
-        medrali = new Liquid("Medrali", Color.valueOf("ffee00"){{
+        medrali = new Liquid("Medrali", Color.valueOf("ffee00")){{
             // lol i did nothing
         }};
 
-        poligen = new Liquid("Poligen", Color.valueOf("ffee00"){{
+        poligen = new Liquid("Poligen", Color.valueOf("ffee00")){{
             gas = true;
         }};
 
-        petragen = new Liquid("Petragen", Color.valueOf("ffee00"){{
+        petragen = new Liquid("Petragen", Color.valueOf("ffee00")){{
             gas = true;
         }};
 
