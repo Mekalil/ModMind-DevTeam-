@@ -326,7 +326,7 @@ public class ExampleJavaMod extends Mod{
         repairField = new RegenProjector("Repair-field"){{
             localizedName = "Repair Field";
             requirements(Category.effect, with(cophalast, 10, trinaxide, 10));
-            size = 3; range = 30; healPercent = 20f / 60f
+            size = 3; range = 30; healPercent = 20f / 60f;
 
             consumePower(1f);
             consumeLiquid(medrali, 1f / 60f);
