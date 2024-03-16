@@ -9,8 +9,14 @@ import mindustry.gen.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 import mindustry.type.*;
-import mindustry.world.*;
 import arc.graphics.*;
+
+import mindustry.world.*;
+import mindustry.world.blocks.production.*;
+import mindustry.world.blocks.environment.*;
+import mindustry.world.blocks.liquid.*;
+import mindustry.world.blocks.power.*:
+import mindustry.world.blocks.sandbox.*;
 
 public class ExampleJavaMod extends Mod{
 
