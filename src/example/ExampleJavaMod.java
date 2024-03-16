@@ -29,88 +29,88 @@ public class ExampleJavaMod extends Mod{
         // item category:
         
         cophalast = new Item("Cophalast", Color.valueOf("dee650")){{
-            name = "Cophalast";
+            localizedName = "Cophalast";
             cost = 1f;
         }};
 
         trinaxide = new Item("Trinaxide", Color.valueOf("dee650")){{
-            name = "Trinaxide";
+            localizedName = "Trinaxide";
             cost = 1f;
         }};
 
         monoglox = new Item("Monoglox", Color.valueOf("dee650")){{
-            name = "Monoglox";
+            localizedName = "Monoglox";
             cost = 1f;
         }};
 
         polamenis = new Item("Polanemis", Color.valueOf("dee650")){{
-            name = "Polanemis";
+            localizedName = "Polanemis";
             cost = 1f;
             flammability = 1f;
             explosiveness = 0.2f;
         }};
 
         xenathium = new Item("Xenathium", Color.valueOf("dee650")){{
-            name = "Xenathium";
+            localizedName = "Xenathium";
             cost = 1f;
         }};
 
         hilimeni = new Item("Hilimeni", Color.valueOf("dee650")){{
-            name = "Hilimeni";
+            localizedName = "Hilimeni";
             cost = 1f;
             flammability = 0.2f;
             explosiveness = 1f;
         }};
 
         hexademia = new Item("Hexademia", Color.valueOf("dee650")){{
-            name = "Hexademia";
+            localizedName = "Hexademia";
             cost = 1f;
         }};
 
         // Synthetic materials
 
         kructrok = new Item("Kructrok", Color.valueOf("dee650")){{
-            name = "Kructrok";
+            localizedName = "Kructrok";
             cost = 1f;
         }};
 
         nasmehro = new Item("Nasmehro", Color.valueOf("dee650")){{
-            name = "Nasmehro";
+            localizedName = "Nasmehro";
             cost = 1f;
         }};
 
         flukemasd = new Item("Flukemasd", Color.valueOf("dee650")){{
-            name = "Flukemasd fiber";
+            localizedName = "Flukemasd fiber";
             cost = 1f;
         }};
 
         // End of material, start for liquid.
         
         medrali = new Liquid("Medrali", Color.valueOf("ffee00")){{
-            name = "Medrali";
+            localizedName = "Medrali";
             coolant = true; heatCapacity = 1f;
         }};
 
         poligen = new Liquid("Poligen", Color.valueOf("ffee00")){{
-            name = "Poligen";
+            localizedName = "Poligen";
             coolant = true; heatCapacity = 1.6f; gas = true;
         }};
 
         petragen = new Liquid("Petragen", Color.valueOf("ffee00")){{
-            name = "Petragen";
+            localizedName = "Petragen";
             coolant = false;
             gas = true;
         }};
         // End of liquid, next one for drills - block
         
         cophalastDrill = new Drill("Cophalast-drill") {{
-            name = "Cophalast Drill";
+            localizedName = "Cophalast Drill";
             size = 2; tier = 2; drillTime = 600f;
             requirements(Category.prodution, with(Cophalast, 10));
         }};
         
         trinaxideBeam = new BeamDrill("Trinaxide-beam") {{
-            name= "Trinaxide Beam Drill";
+            localizedName= "Trinaxide Beam Drill";
             size = 2; tier = 2; drillTime = 600f;
             requirements(Category.prodution, with(cophalast, 10, trinaxide, 10, krutrok, 10));
             consumePower(1f);
@@ -118,7 +118,7 @@ public class ExampleJavaMod extends Mod{
         }};
         
         xenathiumDrill = new Drill("Xenathium-drill") {{
-            name = "Xenathium Drill";
+            localizedName = "Xenathium Drill";
             size = 3; tier = 5; drillTime = 600f;
             requirements(Category.prodution, with(cophalast, 10, trinaxide, 10, krutrok, 10, xenathium, 10));
             consumePower(5f);
@@ -126,7 +126,7 @@ public class ExampleJavaMod extends Mod{
         }};
         
         hilimeniLaserBeam = new BeamDrill("Hilimeni-beam") {{
-            name = "Hilimeni Laser";
+            localizedName = "Hilimeni Laser";
             size = 3; tier = 5; drillTime = 600f;
             requirements(Category.prodution, with(cophalast, 10, trinaxide, 10, krutrok, 10, hilimeni, 10));
             consumePower(5f);
@@ -135,7 +135,7 @@ public class ExampleJavaMod extends Mod{
         
         
         hexademiaDrill = new Drill("Hexademia-drill") {{
-            name = "Hexademia Harderness Drill";
+            localizedName = "Hexademia Harderness Drill";
             size = 4; tier = 7; drillTime = 600f;
             requirements(Category.prodution, with(cophalast, 10, trinaxide, 10, krutrok, 10, xenathium, 10));
             consumePower(5f);
