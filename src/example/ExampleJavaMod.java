@@ -46,7 +46,10 @@ public class ExampleJavaMod extends Mod{
     public static Item cophalast, trinaxide, monoglox, polamenis, xenathium, hilimeni, hexademia, kructrok, nasmehro, flukemasd;
     public static Liquid medrali, poligen, petragen;
     public static Block cophalastDrill, trinaxideBeam, xenathiumDrill, hilimeniLaserBeam, hexademiaDrill, medraliDrill;
-    public static Block factorys;
+    public static Block electrolysis, kructrokFactory, nasmehroFactory, flukemasdFactory;
+    public static Block diffGen, hilimeniGen, atomicGen;
+    
+    
 
     public ExampleJavaMod(){
     }
@@ -170,16 +173,90 @@ public class ExampleJavaMod extends Mod{
             consumeCoolant(6, true, true).boost();
         }};
         
-        medraliDrill = new SolidPump("medrali-extractor"){{
+        medraliDrill = new SolidPump("Medrali-extractor"){{
             requirements(Category.production, with(cophalast, 10, trinaxide, 10));
-            result = medrali; pumpAmount = 0.11f;
+            result = medrali; pumpAmount = 5f;
             localizedName = "Medrali extractor";
-            size = 2; liquidCapacity = 30f;
+            size = 2; liquidCapacity = 600f;
             attribute = Attribute.water;
             envRequired |= Env.groundWater;
-            consumePower(1.5f);
+            consumeItem(polamenis);
         }};
         
+        // end of drill, next factorys:
+        
+        electrolysis = new GenericCrafter("Electrolysis-plant"){{
+            localizedName = "Eletrolysis Plant";
+            requirements(Category.crafting, with(cophalast, 10, trinaxide, 10));
+            size = 3; craftTime = 10f; rotate = true;
+            invertFlip = true; liquidCapacity = 50f;
+
+            consumeLiquid(Liquids.water, 10f / 60f);
+            consumePower(1f);
+
+            regionRotated1 = 3;
+            outputLiquids = LiquidStack.with(poligen, 4f/ 60f, petragen, 6f/ 60f);
+            liquidOutputDirections = new int[]{1, 3};
+        }};
+        
+        kructrokFactory = new GenericCrafter("Kructrok-factory"){{
+            localizedName = "Kructrok Refining Furnace";
+            requirements(Category.crafting, with(cophalast, 10, trinaxide, 10));
+
+            outputItem = new ItemStack(kructrok, 3);
+            craftTime = 90f; size = 3;
+
+            consumeItem(polamenis, 3, monoglox, 5);
+            consumePower(1f);
+        }};
+        
+        nasmehroFactory = new GenericCrafter("Nasmehro-factory"){{
+            localizedName = "Nasmehro Alloy Mixer Factory";
+            requirements(Category.crafting, with(cophalast, 10, trinaxide, 10));
+
+            outputItem = new ItemStack(nasmehro, 3);
+            craftTime = 90f; size = 4;
+
+            consumeItem(trinaxide, 2, hilimeni, 1, xenathium, 1, kructrok, 1);
+            consumePower(1f);
+        }};
+        
+        flukemasdFactory = new GenericCrafter("Flukemasd-factory"){{
+            localizedName = "Flukemasd Synthetic Fiber Refining Factory";
+            requirements(Category.crafting, with(cophalast, 10, trinaxide, 10));
+
+            outputItem = new ItemStack(flukemasd, 3);
+            craftTime = 90f; size = 5;
+
+            consumeItem(hexademia, 3, monoglox, 10);
+            consumePower(1f);
+        }};
+        
+        diffGen = new ConsumeGenerator("Diff-gen"){{
+            localizedName = "Different Generator (f)";
+            requirements(Category.power, with(cophalast, 10, trinaxide, 10));
+            powerProduction = 18f; itemDuration = 60f;
+            hasLiquids = true; hasItems = true; size = 5;
+
+            consumeItem(polamenis);
+            consumeLiquid(medrali, 6f/ 60f);
+        }};
+        
+        hilimeniGen = new NuclearReactor("Hilimeni-gen"){{
+            localizedName = "Hilimeni Energy Core Generator";
+            requirements(Category.power, with(cophalast, 10));
+            size = 5; itemDuration = 600f; powerProduction = 50f;
+
+            consumeItem(hilimeni); itemCapacity = 50;
+        }};
+
+        atomicGen = new ImpactReactor("Atomic Generator"){{
+            requirements(Category.power, with(cophalast, 10));
+            size = 6; powerProduction = 200f; itemDuration = 60f;
+            liquidCapacity = 60f; itemCapacity = 20;
+
+            consumePower(25f); consumeLiquid(petragen, 1f);
+        }};
 
         
 
