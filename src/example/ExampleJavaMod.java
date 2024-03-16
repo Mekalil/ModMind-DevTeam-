@@ -35,6 +35,7 @@ import mindustry.world.blocks.units.*;
 import mindustry.world.consumers.*;
 import mindustry.world.draw.*;
 import mindustry.world.meta.*;
+import mindustry.mod.*;
 
 import static mindustry.Vars.*;
 import static mindustry.type.ItemStack.*;
