@@ -289,7 +289,7 @@ public class ExampleJavaMod extends Mod{
         
         mantimela = new CoreBlock("Mantimela"){{
             localizedName = "Core: Mantimela HQ";
-            requirements(Category.effect, with(cophalast, 4000, xe athium, 4000, kructrok, 4000, nasmehro, 1000));
+            requirements(Category.effect, with(cophalast, 4000, xenathium, 4000, kructrok, 4000, nasmehro, 1000));
 
             isFirstTier = true; unitType = mega;
             health = 22000; itemCapacity = 16000; size = 6; 
@@ -351,7 +351,7 @@ public class ExampleJavaMod extends Mod{
         bigRepairField = new RegenProjector("Big-repair-field"){{
             localizedName = "Big Repair Field";
             requirements(Category.effect, with(cophalast, 10, trinaxide, 10));
-            size = 4; range = 40; healPercent = 20f / 60f
+            size = 4; range = 40; healPercent = 20f / 60f;
 
             consumePower(1f);
             consumeLiquid(petragen, 1f / 60f);
@@ -432,7 +432,7 @@ public class ExampleJavaMod extends Mod{
             size = 3;
         }};
         
-        bigProcessor = = new LogicBlock("Big-processor"){{
+        bigProcessor = new LogicBlock("Big-processor"){{
             localizedName = "Big Processor";
             requirements(Category.logic, with(cophalast, 10, trinaxide, 10, kructrok, 10, xenathium, 10, hexademis, 10));
 
