@@ -1,4 +1,4 @@
-khôngpackage example;
+package example;
 
 import arc.graphics.*;
 import arc.math.*;
