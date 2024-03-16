@@ -134,13 +134,13 @@ public class ExampleJavaMod extends Mod{
         cophalastDrill = new Drill("Cophalast-drill") {{
             localizedName = "Cophalast Drill";
             size = 2; tier = 2; drillTime = 600f;
-            requirements(Category.prodution, with(cophalast, 10));
+            requirements(Category.production, with(cophalast, 10));
         }};
         
         trinaxideBeam = new BeamDrill("Trinaxide-beam") {{
             localizedName= "Trinaxide Beam Drill";
             size = 2; tier = 2; drillTime = 600f;
-            requirements(Category.prodution, with(cophalast, 10, trinaxide, 10, krutrok, 10));
+            requirements(Category.production, with(cophalast, 10, trinaxide, 10, krutrok, 10));
             consumePower(1f);
             consumeCoolant(6, true, true).boost();
         }};
@@ -148,7 +148,7 @@ public class ExampleJavaMod extends Mod{
         xenathiumDrill = new Drill("Xenathium-drill") {{
             localizedName = "Xenathium Drill";
             size = 3; tier = 5; drillTime = 600f;
-            requirements(Category.prodution, with(cophalast, 10, trinaxide, 10, krutrok, 10, xenathium, 10));
+            requirements(Category.production, with(cophalast, 10, trinaxide, 10, krutrok, 10, xenathium, 10));
             consumePower(5f);
             consumeCoolant(6, true, true).boost();
         }};
@@ -156,7 +156,7 @@ public class ExampleJavaMod extends Mod{
         hilimeniLaserBeam = new BeamDrill("Hilimeni-beam") {{
             localizedName = "Hilimeni Laser";
             size = 3; tier = 5; drillTime = 600f;
-            requirements(Category.prodution, with(cophalast, 10, trinaxide, 10, krutrok, 10, hilimeni, 10));
+            requirements(Category.production, with(cophalast, 10, trinaxide, 10, krutrok, 10, hilimeni, 10));
             consumePower(5f);
             consumeCoolant(6, true, true).boost();
         }};
@@ -165,13 +165,13 @@ public class ExampleJavaMod extends Mod{
         hexademiaDrill = new Drill("Hexademia-drill") {{
             localizedName = "Hexademia Harderness Drill";
             size = 4; tier = 7; drillTime = 600f;
-            requirements(Category.prodution, with(cophalast, 10, trinaxide, 10, krutrok, 10, xenathium, 10));
+            requirements(Category.production, with(cophalast, 10, trinaxide, 10, krutrok, 10, xenathium, 10));
             consumePower(5f);
             consumeCoolant(6, true, true).boost();
         }};
         
         medraliDrill = new SolidPump("water-extractor"){{
-            requirements(Category.prodution, with(cophalast, 10, trinaxide, 10));
+            requirements(Category.production, with(cophalast, 10, trinaxide, 10));
             result = Liquids.water; pumpAmount = 0.11f;
             size = 2; liquidCapacity = 30f;
             attribute = Attribute.water;
