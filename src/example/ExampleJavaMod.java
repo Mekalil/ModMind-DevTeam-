@@ -5,11 +5,11 @@ import arc.util.*;
 import mindustry.*;
 import mindustry.content.*;
 import mindustry.game.EventType.*;
-import mindustry.world.*;
 import mindustry.gen.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 import mindustry.type.*;
+import mindustry.world.*;
 import arc.graphics.*;
 
 public class ExampleJavaMod extends Mod{
@@ -29,88 +29,88 @@ public class ExampleJavaMod extends Mod{
         // item category:
         
         cophalast = new Item("Cophalast", Color.valueOf("dee650")){{
-            displayName = "Cophalast";
+            name = "Cophalast";
             cost = 1f;
         }};
 
         trinaxide = new Item("Trinaxide", Color.valueOf("dee650")){{
-            displayName = "Trinaxide";
+            name = "Trinaxide";
             cost = 1f;
         }};
 
         monoglox = new Item("Monoglox", Color.valueOf("dee650")){{
-            displayName = "Monoglox";
+            name = "Monoglox";
             cost = 1f;
         }};
 
         polamenis = new Item("Polanemis", Color.valueOf("dee650")){{
-            displayName = "Polanemis";
+            name = "Polanemis";
             cost = 1f;
             flammability = 1f;
             explosiveness = 0.2f;
         }};
 
         xenathium = new Item("Xenathium", Color.valueOf("dee650")){{
-            displayName = "Xenathium";
+            name = "Xenathium";
             cost = 1f;
         }};
 
         hilimeni = new Item("Hilimeni", Color.valueOf("dee650")){{
-            displayName = "Hilimeni";
+            name = "Hilimeni";
             cost = 1f;
             flammability = 0.2f;
             explosiveness = 1f;
         }};
 
         hexademia = new Item("Hexademia", Color.valueOf("dee650")){{
-            displayName = "Hexademia";
+            name = "Hexademia";
             cost = 1f;
         }};
 
         // Synthetic materials
 
         kructrok = new Item("Kructrok", Color.valueOf("dee650")){{
-            displayName = "Kructrok";
+            name = "Kructrok";
             cost = 1f;
         }};
 
         nasmehro = new Item("Nasmehro", Color.valueOf("dee650")){{
-            displayName = "Nasmehro";
+            name = "Nasmehro";
             cost = 1f;
         }};
 
         flukemasd = new Item("Flukemasd", Color.valueOf("dee650")){{
-            displayName = "Flukemasd fiber";
+            name = "Flukemasd fiber";
             cost = 1f;
         }};
 
         // End of material, start for liquid.
         
         medrali = new Liquid("Medrali", Color.valueOf("ffee00")){{
-            displayName = "Medrali";
+            name = "Medrali";
             coolant = true; heatCapacity = 1f;
         }};
 
         poligen = new Liquid("Poligen", Color.valueOf("ffee00")){{
-            displayName = "Poligen";
+            name = "Poligen";
             coolant = true; heatCapacity = 1.6f; gas = true;
         }};
 
         petragen = new Liquid("Petragen", Color.valueOf("ffee00")){{
-            displayName = "Petragen";
+            name = "Petragen";
             coolant = false;
             gas = true;
         }};
         // End of liquid, next one for drills - block
         
         cophalastDrill = new Drill("Cophalast-drill") {{
-            displayName = "Cophalast Drill";
+            name = "Cophalast Drill";
             size = 2; tier = 2; drillTime = 600f;
             requirements(Category.prodution, with(Cophalast, 10));
         }};
         
         trinaxideBeam = new BeamDrill("Trinaxide-beam") {{
-            displayName= "Trinaxide Beam Drill";
+            name= "Trinaxide Beam Drill";
             size = 2; tier = 2; drillTime = 600f;
             requirements(Category.prodution, with(cophalast, 10, trinaxide, 10, krutrok, 10));
             consumePower(1f);
@@ -118,7 +118,7 @@ public class ExampleJavaMod extends Mod{
         }};
         
         xenathiumDrill = new Drill("Xenathium-drill") {{
-            displayName = "Xenathium Drill";
+            name = "Xenathium Drill";
             size = 3; tier = 5; drillTime = 600f;
             requirements(Category.prodution, with(cophalast, 10, trinaxide, 10, krutrok, 10, xenathium, 10));
             consumePower(5f);
@@ -126,7 +126,7 @@ public class ExampleJavaMod extends Mod{
         }};
         
         hilimeniLaserBeam = new BeamDrill("Hilimeni-beam") {{
-            displayName = "Hilimeni Laser";
+            name = "Hilimeni Laser";
             size = 3; tier = 5; drillTime = 600f;
             requirements(Category.prodution, with(cophalast, 10, trinaxide, 10, krutrok, 10, hilimeni, 10));
             consumePower(5f);
@@ -135,7 +135,7 @@ public class ExampleJavaMod extends Mod{
         
         
         hexademiaDrill = new Drill("Hexademia-drill") {{
-            displayName = "Hexademia Harderness Drill";
+            name = "Hexademia Harderness Drill";
             size = 4; tier = 7; drillTime = 600f;
             requirements(Category.prodution, with(cophalast, 10, trinaxide, 10, krutrok, 10, xenathium, 10));
             consumePower(5f);
