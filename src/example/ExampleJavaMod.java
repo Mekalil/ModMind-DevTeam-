@@ -36,6 +36,7 @@ import mindustry.world.consumers.*;
 import mindustry.world.draw.*;
 import mindustry.world.meta.*;
 import mindustry.mod.*;
+import mindustry.type.*;
 
 import static mindustry.Vars.*;
 import static mindustry.type.ItemStack.*;
@@ -52,7 +53,6 @@ public class ExampleJavaMod extends Mod{
 
     @Override
     public void loadContent(){
-        Log.info("Start working for content");
         // loading content. We content too less to in many files      
         // item category:
         
@@ -134,7 +134,7 @@ public class ExampleJavaMod extends Mod{
         cophalastDrill = new Drill("Cophalast-drill") {{
             localizedName = "Cophalast Drill";
             size = 2; tier = 2; drillTime = 600f;
-            requirements(Category.prodution, with(Cophalast, 10));
+            requirements(Category.prodution, with(cophalast, 10));
         }};
         
         trinaxideBeam = new BeamDrill("Trinaxide-beam") {{
