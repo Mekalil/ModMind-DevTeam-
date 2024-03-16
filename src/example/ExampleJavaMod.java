@@ -173,7 +173,7 @@ public class ExampleJavaMod extends Mod{
         medraliDrill = new SolidPump("medrali-extractor"){{
             requirements(Category.production, with(cophalast, 10, trinaxide, 10));
             result = medrali; pumpAmount = 0.11f;
-            locallizedName = "Medrali extractor";
+            localizedName = "Medrali extractor";
             size = 2; liquidCapacity = 30f;
             attribute = Attribute.water;
             envRequired |= Env.groundWater;
