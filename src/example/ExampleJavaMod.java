@@ -206,7 +206,7 @@ public class ExampleJavaMod extends Mod{
             outputItem = new ItemStack(kructrok, 3);
             craftTime = 90f; size = 3;
 
-            consumeItems(polamenis, 3, monoglox, 5);
+            consumeItems(with(polamenis, 3, monoglox, 5));
             consumePower(1f);
         }};
         
