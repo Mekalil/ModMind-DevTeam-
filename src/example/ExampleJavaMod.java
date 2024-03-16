@@ -16,7 +16,7 @@ public class ExampleJavaMod extends Mod{
     public static Item cophalast, trinaxide, monoglox, polamenis, xenathium, hilimeni, hexademia, kructrok, nasmehro, flukemasd;
     public static Liquid medrali, poligen, petragen;
     public static Block cophalastDrill, trinaxideBeam, xenathiumDrill, hilimeniLaserBeam, hexademiaDrill, medraliDrill;
-    public static Block 
+    public static Block factorys;
 
     public ExampleJavaMod(){
     }
