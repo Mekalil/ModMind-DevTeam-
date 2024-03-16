@@ -217,7 +217,7 @@ public class ExampleJavaMod extends Mod{
             outputItem = new ItemStack(nasmehro, 3);
             craftTime = 90f; size = 4;
 
-            consumeItems(trinaxide, 2, hilimeni, 1, xenathium, 1, kructrok, 1);
+            consumeItems(with(trinaxide, 2, hilimeni, 1, xenathium, 1, kructrok, 1));
             consumePower(1f);
         }};
         
@@ -228,7 +228,7 @@ public class ExampleJavaMod extends Mod{
             outputItem = new ItemStack(flukemasd, 3);
             craftTime = 90f; size = 5;
 
-            consumeItems(hexademia, 3, monoglox, 10);
+            consumeItems(with(hexademia, 3, monoglox, 10));
             consumePower(1f);
         }};
         
