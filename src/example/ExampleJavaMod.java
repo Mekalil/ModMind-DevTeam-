@@ -191,7 +191,7 @@ public class ExampleJavaMod extends Mod{
             size = 3; craftTime = 10f; rotate = true;
             invertFlip = true; liquidCapacity = 50f;
 
-            consumeLiquid(Liquids.water, 10f / 60f);
+            consumeLiquid(medrali, 10f / 60f);
             consumePower(1f);
 
             regionRotated1 = 3;
@@ -206,7 +206,7 @@ public class ExampleJavaMod extends Mod{
             outputItem = new ItemStack(kructrok, 3);
             craftTime = 90f; size = 3;
 
-            consumeItem(polamenis, 3, monoglox, 5);
+            consumeItems(polamenis, 3, monoglox, 5);
             consumePower(1f);
         }};
         
@@ -217,7 +217,7 @@ public class ExampleJavaMod extends Mod{
             outputItem = new ItemStack(nasmehro, 3);
             craftTime = 90f; size = 4;
 
-            consumeItem(trinaxide, 2, hilimeni, 1, xenathium, 1, kructrok, 1);
+            consumeItems(trinaxide, 2, hilimeni, 1, xenathium, 1, kructrok, 1);
             consumePower(1f);
         }};
         
@@ -228,7 +228,7 @@ public class ExampleJavaMod extends Mod{
             outputItem = new ItemStack(flukemasd, 3);
             craftTime = 90f; size = 5;
 
-            consumeItem(hexademia, 3, monoglox, 10);
+            consumeItems(hexademia, 3, monoglox, 10);
             consumePower(1f);
         }};
         
