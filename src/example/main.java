@@ -742,7 +742,7 @@ public class main extends Mod{
             size = 3;
             consumePower(3f);
             consumeLiquid(medrali , 3f / 60f);
-            consumeItems(with(cophalast));
+            consumeItems(with(cophalast, 10));
 
             constructTime = 60f * 30f;
             researchCostMultiplier = 0.75f;
