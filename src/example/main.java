@@ -579,7 +579,7 @@ public class main extends Mod{
             solid = true;
         }};
         
-        cophalastLiquidTank = new LiquidRouter("Cophalast-liquid-container"){{
+        cophalastLiquidTank = new LiquidRouter("Cophalast-liquid-tank"){{
             localizedName = "Cophalast Tank";
             requirements(Category.liquid, with(cophalast, 400));
             liquidCapacity = 3200f;
