@@ -42,7 +42,7 @@ import mindustry.type.*;
 import static mindustry.Vars.*;
 import static mindustry.type.ItemStack.*;
 
-public class main extends Mod{
+public class ExampleJavaMod extends Mod{
 
     public static Item cophalast, trinaxide, monoglox, polamenis, xenathium, hilimeni, hexademia, kructrok, nasmehro, flukemasd;
     public static Liquid medrali, poligen, petragen;
@@ -57,7 +57,7 @@ public class main extends Mod{
     public static Block cophalastConduit, xenathiumConduit, cophalastLiquidBridge, cophalastLiquidRouter, cophalastLiquidContainer, cophalastLiquidTank;
     public static Block cophalastWall, cophalastBigWall, xenathiumWall, xenathiumBigWall, hexademiaWall, hexademiaBigWall, nasmehroWall, nasmehroBigWall, flukemashWall, flukemasdBigWall;
 
-    public main(){
+    public ExampleJavaMod(){
     }
 
     @Override
@@ -592,35 +592,35 @@ public class main extends Mod{
         cophalastWall = new Wall("Cophalast-wall"){{
             localizedName = "Cophalast Wall";
             requirements(Category.defense, with(cophalast, 10));
-            health = 80 * wallHealthMultiplier;
+            health = 80 ;
             envDisabled |= Env.scorching; size = 2;
         }};
         
         cophalastBigWall = new Wall("Cophalast-big-wall"){{
             localizedName = "Cophalast Big Wall";
             requirements(Category.defense, with(cophalast, 10));
-            health = 80 * wallHealthMultiplier;
+            health = 80 ;
             envDisabled |= Env.scorching; size = 3;
         }};
         
         xenathiumWall = new Wall("Xenathium-wall"){{
             localizedName = "Xenathium Wall";
             requirements(Category.defense, with(cophalast, 10));
-            health = 80 * wallHealthMultiplier;
+            health = 80 ;
             envDisabled |= Env.scorching; size = 2;
         }};
         
         xenathiumBigWall = new Wall("Xenathium-big-wall"){{
             localizedName = "Xenathium Big Wall";
             requirements(Category.defense, with(cophalast, 10));
-            health = 80 * wallHealthMultiplier;
+            health = 80 ;
             envDisabled |= Env.scorching; size = 3;
         }};
         
         hexademiaWall = new Wall("Hexademia-wall"){{
             localizedName = "Hexademia Wall";
             requirements(Category.defense, with(cophalast, 10));
-            health = 80 * wallHealthMultiplier; absorbLasers = true;
+            health = 80 ; absorbLasers = true;
             envDisabled |= Env.scorching; size = 2;
             
         }};
@@ -628,14 +628,14 @@ public class main extends Mod{
         hexademiaBigWall = new Wall("Hexademia-big-wall"){{
             localizedName = "Hexademia Big Wall";
             requirements(Category.defense, with(cophalast, 10));
-            health = 80 * wallHealthMultiplier; absorbLasers = true;
+            health = 80 ; absorbLasers = true;
             envDisabled |= Env.scorching; size = 3;
         }};
         
         nasmehroWall = new Wall("Nasmehro-wall"){{
             localizedName = "Nasmehro Wall";
             requirements(Category.defense, with(cophalast, 10));
-            health = 80 * wallHealthMultiplier; 
+            health = 80 ; 
             lightningChance = 0.5f;
             envDisabled |= Env.scorching; size = 2;
         }};
@@ -643,7 +643,7 @@ public class main extends Mod{
         nasmehroBigWall = new Wall("Nasmehro-big-wall"){{
             localizedName = "Nasmehro Big Wall";
             requirements(Category.defense, with(cophalast, 10));
-            health = 80 * wallHealthMultiplier;
+            health = 80 ;
             lightningChance = 0.75f;
             envDisabled |= Env.scorching; size = 3;
         }};
@@ -651,7 +651,7 @@ public class main extends Mod{
         flukemashWall = new Wall("Flukemasd-wall"){{
             localizedName = "Flukemasd Wall";
             requirements(Category.defense, with(cophalast, 10));
-            health = 80 * wallHealthMultiplier;
+            health = 80 ;
             chanceDeflect = 30f; flashHit = true;
             envDisabled |= Env.scorching; size = 2;
         }};
@@ -660,7 +660,7 @@ public class main extends Mod{
             localizedName = "Flukemasd Big Wall";
             requirements(Category.defense, with(cophalast, 10));
             chanceDeflect = 60f; flashHit = true;
-            health = 80 * wallHealthMultiplier;
+            health = 80 ;
             envDisabled |= Env.scorching; size = 3;
         }};
         
