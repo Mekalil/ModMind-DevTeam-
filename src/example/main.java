@@ -725,7 +725,7 @@ public class main extends Mod{
         
         aircraftFactory = new UnitFactory("Aircraft-factory"){{
             localizedName = "Aircraft Factory";
-            requirements(Category.units, with(cophalast, 10);
+            requirements(Category.units, with(cophalast, 10));
             plans = Seq.with(
                 new UnitPlan(UnitTypes.flare, 60f * 15, with(Items.silicon, 15)),
                 new UnitPlan(UnitTypes.mono, 60f * 35, with(Items.silicon, 30, Items.lead, 15)),
