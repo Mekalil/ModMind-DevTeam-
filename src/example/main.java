@@ -596,7 +596,7 @@ public class main extends Mod{
             envDisabled |= Env.scorching; size = 2;
         }};
         
-        cophalastBigWall = = new Wall("Cophalast-big-wall"){{
+        cophalastBigWall = new Wall("Cophalast-big-wall"){{
             localizedName = "Cophalast Big Wall";
             requirements(Category.defense, with(cophalast, 10));
             health = 80 * wallHealthMultiplier;
