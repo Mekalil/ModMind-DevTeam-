@@ -274,7 +274,7 @@ public class ExampleJavaMod extends Mod{
             localizedName = "Core: Menethik Platform";
             requirements(Category.effect, with(cophalast, 4000));
 
-            isFirstTier = true; unitType = mega;
+            isFirstTier = true; unitType = UnitTypes.mega;
             health = 8000; itemCapacity = 8000; size = 5; 
             armor = 2000f;
             
@@ -291,7 +291,7 @@ public class ExampleJavaMod extends Mod{
             localizedName = "Core: Mantimela HQ";
             requirements(Category.effect, with(cophalast, 4000, xenathium, 4000, kructrok, 4000, nasmehro, 1000));
 
-            isFirstTier = true; unitType = mega;
+            unitType = UnitTypes.mega;
             health = 22000; itemCapacity = 16000; size = 6; 
             armor = 2500f;
             
@@ -306,9 +306,9 @@ public class ExampleJavaMod extends Mod{
         
         potronagas = new CoreBlock("Potronagas"){{
             localizedName = "Core: Potronagas Planet";
-            requirements(Category.effect, with(vophalast, 4000, krutrok, 4000, xenathium, 4000, hexademis, 4000, nasmehro, 2000));
+            requirements(Category.effect, with(cophalast, 4000, kructrok, 4000, xenathium, 4000, hexademia, 4000, nasmehro, 2000));
 
-            isFirstTier = true; unitType = mega;
+            unitType = UnitType.mega;
             health = 38000; itemCapacity = 25000; size = 7; 
             armor = 3000f;
             
@@ -326,7 +326,7 @@ public class ExampleJavaMod extends Mod{
         repairField = new RegenProjector("Repair-field"){{
             localizedName = "Repair Field";
             requirements(Category.effect, with(cophalast, 10, trinaxide, 10));
-            size = 3; range = 30; healPercent = 20f / 60f;
+            size = 3; range = 30; healPercent = 20f / 60f
 
             consumePower(1f);
             consumeLiquid(medrali, 1f / 60f);
@@ -378,7 +378,7 @@ public class ExampleJavaMod extends Mod{
             requirements(Category.effect, with(xenathium, 10, hilimeni, 10));
             size = 4;
             consumeLiquids(LiquidStack.with(medrali, 1.5f / 60f));
-            consumeItem(hilimeni, 1f/ 60f);
+            consumeItem(hilimeni);
             consumePower(100f / 60f);
             range = 300f;
             reload = 80f;
@@ -406,7 +406,7 @@ public class ExampleJavaMod extends Mod{
         
         bigContainer = new StorageBlock("Big-container"){{
             localizedName = "Big Container";
-            requirements(Category.effect, with(cophalast, 10, krutrok, 10, xenathium, 10));
+            requirements(Category.effect, with(cophalast, 10, kructrok, 10, xenathium, 10));
             size = 3;
             itemCapacity = 2000;
             scaledHealth = 55;
@@ -434,7 +434,7 @@ public class ExampleJavaMod extends Mod{
         
         bigProcessor = new LogicBlock("Big-processor"){{
             localizedName = "Big Processor";
-            requirements(Category.logic, with(cophalast, 10, trinaxide, 10, kructrok, 10, xenathium, 10, hexademis, 10));
+            requirements(Category.logic, with(cophalast, 10, trinaxide, 10, kructrok, 10, xenathium, 10, hexademia, 10));
 
             instructionsPerTick = 16;
             range = 8 * 35;
@@ -451,7 +451,7 @@ public class ExampleJavaMod extends Mod{
         
         dataBank = new MemoryBlock("Data-bank"){{
             localizedName = "Data Bank";
-            requirements(Category.logic, with(xenathium, 10, trinaxide, 10, krutrok, 10));
+            requirements(Category.logic, with(xenathium, 10, trinaxide, 10, kructrok, 10));
 
             memoryCapacity = 256; size = 3;
         }};
@@ -463,7 +463,7 @@ public class ExampleJavaMod extends Mod{
             displaySize = 1080; size = 5;
         }};
         
-        message = new MessageBlock("message"){{
+        messsge = new MessageBlock("message"){{
             localizedName = "Ice Message";
             requirements(Category.logic, with(cophalast, 1));
         }};
