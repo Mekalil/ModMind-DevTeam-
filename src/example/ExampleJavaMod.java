@@ -309,7 +309,7 @@ public class ExampleJavaMod extends Mod{
             localizedName = "Core: Potronagas Planet";
             requirements(Category.effect, with(cophalast, 4000, kructrok, 4000, xenathium, 4000, hexademia, 4000, nasmehro, 2000));
 
-            unitType = UnitType.mega;
+            unitType = UnitTypes.mega;
             health = 38000; itemCapacity = 25000; size = 7; 
             armor = 3000f;
             
