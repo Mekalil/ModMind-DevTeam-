@@ -2,7 +2,7 @@
 "name": "Unknow_",
 "displayName": "Frosty mod",
 "author": "Star conqueror team ",
-"main": "example.ExampleJavaMod",
+"main": "example.main",
 "description": "In production",
 "version": "1.8.3",
 "minGameVersion": "146",
