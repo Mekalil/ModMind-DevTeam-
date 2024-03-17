@@ -755,9 +755,6 @@ public class main extends Mod{
             );
         }};
         
-        quatumnAssembler = new 
-        
-        
         shieldRefabricator = new Reconstructor("Shield-refabricator"){{
             localizedName = "Shield Refabricator";
             requirements(Category.units, with(cophalast, 10));
