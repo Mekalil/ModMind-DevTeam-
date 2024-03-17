@@ -50,9 +50,12 @@ public class ExampleJavaMod extends Mod{
     public static Block electrolysis, kructrokFactory, nasmehroFactory, flukemasdFactory;
     public static Block diffGen, hilimeniGen, atomicGen, battery;
     public static Block menethik, mantimela, potronagas;
-    public static Block repairField, bigRepairField, shieldFileld, damageField, buildTower, smallContainer, bigContainer;
+    public static Block repairField, bigRepairField, shieldFileld, damageField, buildTower, smallContainer, bigContainer, unloader;
     public static Block smallProcessor, processor, bigProcessor, dataCell, dataBank, display, messsge;
     public static Block smallNode, largeNode;
+    public static Block cophalastConveyor, xenathiumConveyor, cophalastBridge, cophalastFlow, cophalastUnderFlow, cophalastSorter, xenathiumDriver, hexademiaDriver;
+    public static Block cophalastConduit, xenathiumConduit, cophalastLiquidBridge, cophalastLiquidRouter, cophalastLiquidContainer, cophalastLiquidTank
+    public static Block cophalastWall, cophalastBigWall, xenathiumWall, xenathiumBigWall, hexademiaWall, hexademiaBigWall, nasmehroWall, nasmehroBigWall, flukemashWall, flukemasdBigWall;
 
     public ExampleJavaMod(){
     }
@@ -282,6 +285,7 @@ public class ExampleJavaMod extends Mod{
             alwaysUnlocked = true;
             incinerateNonBuildable = true;
             requiresCoreZone = true;
+            thrusterLength = 40/4f;
 
             buildCostMultiplier = 1f;
 
@@ -299,6 +303,7 @@ public class ExampleJavaMod extends Mod{
             alwaysUnlocked = true;
             incinerateNonBuildable = true;
             requiresCoreZone = true;
+            thrusterLength = 48/4f;
 
             buildCostMultiplier = 1f;
 
@@ -316,6 +321,7 @@ public class ExampleJavaMod extends Mod{
             alwaysUnlocked = true;
             incinerateNonBuildable = true;
             requiresCoreZone = true;
+            thrusterLength = 58/4f;
 
             buildCostMultiplier = 1f;
 
@@ -458,10 +464,10 @@ public class ExampleJavaMod extends Mod{
         }};
         
         display = new LogicDisplay("Display"){{
-            localizedName = "HD Display (1080p)";
+            localizedName = "Display";
             requirements(Category.logic, with(cophalast, 10, trinaxide, 10, kructrok, 10));
 
-            displaySize = 1080; size = 5;
+            displaySize = 360; size = 12;
         }};
         
         messsge = new MessageBlock("message"){{
@@ -478,22 +484,51 @@ public class ExampleJavaMod extends Mod{
             laserRange = 10;
         }};
 
-        largeNode = new PowerNode("power-node-large"){{
+        largeNode = new PowerNode("Large-node"){{
+            localizedName = "Large Node";
             requirements(Category.power, with(cophalast, 10, trinaxide, 5, kructrok, 5));
             size = 2;
             maxNodes = 15;
             laserRange = 20f;
         }};
         
+        cophalastConveyor = new Conveyor("Cophalast-conveyor"){{
+            localizedName = "Cophalast Conveyor";
+            requirements(Category.distribution, with(cophalast, 1));
+            health = 45; speed = 0.1f; displayedSpeed = 14f;
+        }};
         
-
+        xenathiumConveyor = new Conveyor("Xenathium-conveyor"){{
+            localizedName = "Xenathium Conveyor";
+            requirements(Category.distribution, with(cophalast, 1));
+            health = 45; speed = 0.15f; displayedSpeed = 21f;
+        }};
         
-
+        cophalastSorter = new Sorter("Cophalast-sorter"){{
+            localizedName = "Cophalast Sorter";
+            requirements(Category.distribution, with(cophalast, 2));
+        }};
         
-
+        cophalastBridge = new BufferedItemBridge("Cophalast-bridge"){{
+            localizedName = "Cophalast Bridge";
+            requirements(Category.distribution, with(cophalast, 10));
+            fadeIn = moveArrows = false;
+            range = 6; speed = 100f;
+            arrowSpacing = 6f;
+            bufferCapacity = 25;
+        }};
         
+        cophalastFlow = new OverflowGate("Cophalast-flow"){{
+            localizedName = "Cophalast Flow Gate";
+            requirements(Category.distribution, with(cophalast, 5));
+        }};
         
+        cophalastUnderFlow = new OverflowGate("Cophalast-underflow"){{
+            localizedName = "Cophalast Underflow Gate";
+            requirements(Category.distribution, with(cophalast, 5));
+            invert = true;
+        }};
         
-        
-    }
-} 
+        xenathiumDriver = new MassDriver("Xenathium-driver"){{
+            localizedName = "Xenathium Mass Driver";
+            requirements(Category.distribution, with(xenathium, 100, trinaxide, 50, 
