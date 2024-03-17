@@ -15,6 +15,7 @@ import mindustry.gen.*;
 import mindustry.graphics.*;
 import mindustry.type.*;
 import mindustry.type.unit.*;
+import mindustry.content.*;
 import mindustry.world.*;
 import mindustry.world.blocks.*;
 import mindustry.world.blocks.campaign.*;
@@ -398,7 +399,7 @@ public class ExampleJavaMod extends Mod{
         
         smallContainer = new StorageBlock("Small-container"){{
             localizedName = "Small Container";
-            requirements(Category.effect, with(cophalast, 10, krutrok, 10));
+            requirements(Category.effect, with(cophalast, 10, kructrok, 10));
             size = 2;
             itemCapacity = 1000;
             scaledHealth = 55;
