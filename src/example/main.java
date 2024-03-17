@@ -42,7 +42,7 @@ import mindustry.type.*;
 import static mindustry.Vars.*;
 import static mindustry.type.ItemStack.*;
 
-public class ExampleJavaMod extends Mod{
+public class main extends Mod{
 
     public static Item cophalast, trinaxide, monoglox, polamenis, xenathium, hilimeni, hexademia, kructrok, nasmehro, flukemasd;
     public static Liquid medrali, poligen, petragen;
@@ -57,7 +57,7 @@ public class ExampleJavaMod extends Mod{
     public static Block cophalastConduit, xenathiumConduit, cophalastLiquidBridge, cophalastLiquidRouter, cophalastLiquidContainer, cophalastLiquidTank;
     public static Block cophalastWall, cophalastBigWall, xenathiumWall, xenathiumBigWall, hexademiaWall, hexademiaBigWall, nasmehroWall, nasmehroBigWall, flukemashWall, flukemasdBigWall;
 
-    public ExampleJavaMod(){
+    public main(){
     }
 
     @Override
