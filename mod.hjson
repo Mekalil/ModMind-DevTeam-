@@ -5,5 +5,5 @@
 "main": "example.main",
 "description": "In production",
 "version": "1.8.3",
-"minGameVersion": "146",
+"minGameVersion": "146"
  }
