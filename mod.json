@@ -1,9 +1,9 @@
 {
-"name": "Extremely-Painful-Ice",
-"displayName": "Extremely Painful Ice",
-"author": "Vietnam Mod dev team",
-"main": "neko.ExtremePainfulIce",
-"description": "In production",
-"version": "1.2.0",
-"minGameVersion": "146",
- }
+    "name": "Extremely-Painful-Ice",
+    "displayName": "Extremely Painful Ice",
+    "author": "Vietnam Mod dev team",
+    "main": "neko.ExtremePainfulIce",
+    "description": "In production",
+    "version": "1.2.0",
+    "minGameVersion": "146"
+}
