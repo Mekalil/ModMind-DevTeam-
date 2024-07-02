@@ -76,7 +76,11 @@ jar{
     }
 
     from(projectDir){
+<<<<<<< HEAD
         include "mod.json"
+=======
+        include "mod.hjson"
+>>>>>>> e26b6bee70969ef6c8d717d4d720264f55b1ae8f
     }
 
     from("assets/"){
